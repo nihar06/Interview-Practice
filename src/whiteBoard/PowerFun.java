@@ -26,7 +26,6 @@ public class PowerFun {
 			a = b;
 		}
 		return a * recPow(b, p / 2) * recPow(b, p / 2);
-		// return b * recPow(b, p - 1);
 	}
 
 	public static void main(String[] args) {

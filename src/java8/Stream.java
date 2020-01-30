@@ -42,7 +42,7 @@ public class Stream {
 		System.out.println(p.getCoordinates());
 
 		System.out.println("\n ---------------Sorting-----------------\n");
-		p.getCoordinates().stream().parallel().sorted((x, y) -> (int) (Math.pow(x.get(0), 2) + Math.pow(x.get(1), 2)
+		p.getCoordinates().stream().sorted((x, y) -> (int) (Math.pow(x.get(0), 2) + Math.pow(x.get(1), 2)
 				- Math.pow(y.get(0), 2) + Math.pow(y.get(1), 2))).collect(Collectors.toList());
 		// .forEach(System.out::print);
 
@@ -56,7 +56,7 @@ public class Stream {
 		System.out.println(s);
 
 		System.out.println("\n ---------------Map-----------------\n");
-		p.getCoordinates().stream().parallel().map(x -> x.stream().map(a -> a - 1).collect(Collectors.toList()))
+		p.getCoordinates().stream().map(x -> x.stream().map(a -> a - 1).collect(Collectors.toList()))
 				.collect(Collectors.toList()).forEach(System.out::print);
 
 		System.out.println("\n ---------------Reduce-----------------\n");
